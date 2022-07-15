@@ -1,0 +1,12 @@
+.container{
+  &__image{
+    display: none;
+    height: 300px;
+    width: 300px;
+    &.clicked{
+      display: block;
+      height: 300px;
+      width: 300px;
+    }
+  }
+}
