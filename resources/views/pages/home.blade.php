@@ -42,26 +42,26 @@
     <div class="mT-30">
       <form>
         <div class="mb-3 row">
-          <div class="col-sm-2">Checkbox</div>
+          <div class="col-sm-2">Ingrediente</div>
           <div class="col-sm-10">
             <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
-                  type="checkbox"> Check me out</label></div>
+                  type="checkbox"> Amendoim</label></div>
           </div>
         </div>
 
         <div class="mb-3 row">
-          <div class="col-sm-2">Checkbox</div>
+          <div class="col-sm-2">Ingrediente</div>
           <div class="col-sm-10">
             <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
-                  type="checkbox"> Check me out</label></div>
+                  type="checkbox"> Morango</label></div>
           </div>
         </div>
 
         <div class="mb-3 row">
-          <div class="col-sm-2">Checkbox</div>
+          <div class="col-sm-2">Ingrediente</div>
           <div class="col-sm-10">
             <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
-                  type="checkbox"> Check me out</label></div>
+                  type="checkbox"> Banana</label></div>
           </div>
         </div>
         <div class="mb-3 row">
