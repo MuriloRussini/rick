@@ -40,35 +40,40 @@
   <div class="bgc-white p-20 bd">
     <h6 class="c-grey-900">Horizontal Form</h6>
     <div class="mT-30">
-      <form>
-        <div class="mb-3 row">
-          <div class="col-sm-2">Ingrediente</div>
-          <div class="col-sm-10">
-            <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
-                  type="checkbox"> Amendoim</label></div>
-          </div>
+        <div class="row">
+          <div style="margin-bottom: 1.5rem;">Ingredientes</div> {{-- divide it into the proper number of columns and then get started with js on the buttons & organize the class names better --}}
+          <form>
+            <div class="ingredients__label">
+              @for ($i = 1; $i <= 12; $i++)
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                  <div class="col-sm-10">
+                    <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
+                          type="checkbox" id="ingredient"> Amendoim</label></div>
+                  </div>
+                </div>
+              @endfor
+            </div>
+          </form>
         </div>
+      <div class="row">
+				{{-- <form>
+          <div>Ingredientes</div>
+          @for ($i = 1; $i <= 12; $i++)
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <div class="col-sm-10">
+                <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
+                      type="checkbox"> Amendoim</label></div>
+              </div>
+            </div>
+          @endfor --}}
 
-        <div class="mb-3 row">
-          <div class="col-sm-2">Ingrediente</div>
-          <div class="col-sm-10">
-            <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
-                  type="checkbox"> Morango</label></div>
+          <div class="mb-3 row" style="margin-top: 1.5rem;">
+            <div class="col-sm-10"><button type="submit" class="btn btn-primary btn-color">Sign in</button></div>
+            <div id="image-btn" style="padding: 15px; border: 3px solid red;">CLICK ME</div>
           </div>
-        </div>
-
-        <div class="mb-3 row">
-          <div class="col-sm-2">Ingrediente</div>
-          <div class="col-sm-10">
-            <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
-                  type="checkbox"> Banana</label></div>
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <div class="col-sm-10"><button type="submit" class="btn btn-primary btn-color">Sign in</button></div>
-          <div id="image-btn" style="padding: 15px; border: 3px solid red;">CLICK ME</div>
-        </div>
-      </form>
+        </form>
+      </div>
+      
       <script src="/js/image.js"></script>
     </div>
   </div>
