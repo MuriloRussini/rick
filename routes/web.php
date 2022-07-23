@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
+Route::group([
+    'prefix' => 'ingredients',
+    'as' => 'ingredients.'
+], function () {
+    Route::get('/', [\App\Http\Controllers\Admin\IngredientController::class, 'index'])->name('index');
+    Route::get('/', [\App\Http\Controllers\Admin\IngredientController::class, 'create'])->name('create');
+    Route::post('/', [\App\Http\Controllers\Admin\IngredientController::class, 'store'])->name('store');
+    // return view('pages/home');
 });
 
 Route::get('/dashboard', function () {

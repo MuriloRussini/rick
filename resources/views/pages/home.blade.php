@@ -43,16 +43,16 @@
         <div class="row">
           <div style="margin-bottom: 1.5rem;">Ingredientes</div> {{-- divide it into the proper number of columns and then get started with js on the buttons & organize the class names better --}}
           <form>
-            <div class="ingredients__label">
-              @for ($i = 1; $i <= 12; $i++)
+            {{-- <div class="ingredients__label">
+              @foreach ($ingredients as $ingredient)
                 <div class="col-sm-6 col-lg-4 col-xl-3">
                   <div class="col-sm-10">
                     <div class="form-check"><label class="form-label form-check-label"><input class="form-check-input"
-                          type="checkbox" id="ingredient"> Amendoim</label></div>
+                          type="checkbox" id="ingredient"> {{ $ingredient }}</label></div>
                   </div>
                 </div>
-              @endfor
-            </div>
+              @endforeach
+            </div> --}}
           </form>
         </div>
       <div class="row">
@@ -68,7 +68,18 @@
           @endfor --}}
 
           <div class="mb-3 row" style="margin-top: 1.5rem;">
-            <div class="col-sm-10"><button type="submit" class="btn btn-primary btn-color">Sign in</button></div>
+            <form method="POST" action="{{ route('ingredients.store') }}">
+              @csrf
+              <div class="mb-3"><label class="form-label" for="ingredient">Ingrediente</label> <input type="text" name="ingredient"
+                  class="form-control" id="ingredient" placeholder="ex: Banana" value="{{ old('ingredient') }}" autocomplete="off">
+                  @error('ingredient')
+                    <div class="error-sub-text">
+                        {{ $message }}
+                    </div>
+                  @enderror
+              </div>
+              <div class="col-sm-10"><button type="submit" class="btn btn-primary btn-color">Sign in</button></div>
+            </form>
             <div id="image-btn" style="padding: 15px; border: 3px solid red;">CLICK ME</div>
           </div>
         </form>
@@ -80,3 +91,7 @@
   @include('components/image-display')
 </div>
 @endsection
+
+{{-- a IDEIA É FAZER O FOREACH ($INGREDIENTS AS $INGREDIENT) funcionar, criei os controller e o model e agora tem que fazer o esquema de autenticação do usuário pra ele começar a adicionar os ingredientes na db --}}
+
+{{-- usar o botão pra adicionar ingrediente pra db --}}

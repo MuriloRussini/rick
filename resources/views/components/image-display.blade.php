@@ -1,5 +1,5 @@
 <div class="container">
   <div class="container__image">
-    <img src="https://www.luxury-architecture.net/wp-content/uploads/2018/03/1521770360-1408-wildwood-main.jpg" alt="">
+    <img src="https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/05/bolo-de-banana-integral-1024x576.jpg" alt="">
   </div>
 </div>
