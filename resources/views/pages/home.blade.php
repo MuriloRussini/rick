@@ -78,7 +78,7 @@
                     </div>
                   @enderror
               </div>
-              <div class="col-sm-10"><button type="submit" class="btn btn-primary btn-color">Sign in</button></div>
+              <div class="col-sm-10"><button type="submit" class="btn btn-primary btn-color">Adicionar ingrediente</button></div>
             </form>
             <div id="image-btn" style="padding: 15px; border: 3px solid red;">CLICK ME</div>
           </div>
